@@ -943,6 +943,24 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
     </div>
   </section>
 
+  <!-- Hansa experience film -->
+  <section id="hansa-film" class="hg-film-section" aria-labelledby="hg-film-title">
+    <div class="hg-film-layout">
+      <div class="hg-film-copy">
+        <span class="hg-eyebrow">THE HANSA EXPERIENCE</span>
+        <h2 id="hg-film-title" class="hg-h2">A closer look at Hansa.</h2>
+        <p>A visual introduction to Hansa Gems &amp; Jewellery. Press play whenever you’re ready.</p>
+        <span class="hg-film-note">Made to be enjoyed at your pace.</span>
+      </div>
+      <div class="hg-film-frame">
+        <video class="hg-film-video" controls playsinline preload="none" aria-label="Watch the Hansa Gems and Jewellery film">
+          <source src="Assests/hansa-experience.mp4" type="video/mp4">
+          Your browser does not support embedded video.
+        </video>
+      </div>
+    </div>
+  </section>
+
   <!-- How It Works -->
   <section id="process" class="hg-section-cream">
     <div class="hg-sec hg-process-layout">
@@ -1338,7 +1356,18 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
   if(video.readyState>=3)start();else video.addEventListener("canplay",start,{once:true});
 })();
 </script>
-<style>.hg-hero-video{display:block!important;visibility:visible!important;opacity:1!important}</style></body>
+<style>.hg-hero-video{display:block!important;visibility:visible!important;opacity:1!important}</style>
+<style id="hansa-experience-video-styles">
+  .hg-film-section{position:relative;z-index:2;background:var(--bg-sec-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .hg-film-layout{width:min(100%,1248px);margin:0 auto;padding:clamp(64px,8vw,104px) clamp(24px,4vw,52px);display:grid;grid-template-columns:minmax(230px,.72fr) minmax(0,1.28fr);gap:clamp(28px,6vw,76px);align-items:center}
+  .hg-film-copy{display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+  .hg-film-copy .hg-h2{font-size:clamp(38px,4.4vw,58px)}
+  .hg-film-copy p{max-width:390px;margin:0;color:var(--body);font-size:15px;line-height:1.8}
+  .hg-film-note{color:var(--gold-dark);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .hg-film-frame{padding:9px;border:1px solid var(--gold-border);background:var(--bg-card);box-shadow:var(--card-shadow)}
+  .hg-film-video{display:block;width:100%;aspect-ratio:16/9;background:#100f0d;object-fit:contain}
+  @media(max-width:760px){.hg-film-layout{grid-template-columns:1fr;gap:26px;padding:58px 20px}.hg-film-copy .hg-h2{font-size:42px}.hg-film-copy p{font-size:14px}.hg-film-frame{padding:5px}}
+</style></body>
 </html>
 
 
