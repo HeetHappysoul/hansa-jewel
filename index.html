@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Hansa Gems &amp; Jewellery — Bespoke Jewellery Made to Your Design</title>
+  <link rel="icon" type="image/svg+xml" href="Assests/hansa-favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
@@ -845,7 +846,7 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
   <!-- Adaptive Header -->
   <header class="hg-header">
     <nav class="hg-nav" aria-label="Main">
-      <a href="#top" class="hg-brand" aria-label="Hansa Gems and Jewellery, home">
+      <a href="#top" class="hg-brand" aria-label="Hansa Gems and Jewellery, home" data-phone-target="#phone-top">
         <span class="hg-logo-wrap">
           <svg class="hg-logo-svg" aria-hidden="true" viewBox="0 0 100 100" fill="none">
             <path d="M50 90 L10 46 L28 20 L72 20 L90 46 Z M10 46 H90 M28 20 L50 46 L72 20 M50 46 L50 90" stroke="currentColor" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -875,22 +876,102 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
     </nav>
 
     <div id="mobilePanel" class="hg-mpanel">
-      <a class="hg-mlink" href="#about">About us <span>&rsaquo;</span></a>
-      <a class="hg-mlink" href="#process">How it works <span>&rsaquo;</span></a>
+      <a class="hg-mlink" href="#about" data-phone-target="#phone-about">About us <span>&rsaquo;</span></a>
+      <a class="hg-mlink" href="#process" data-phone-target="#phone-how">How it works <span>&rsaquo;</span></a>
       <a class="hg-mlink" href="#pricing">Making charges <span>&rsaquo;</span></a>
-      <a class="hg-mlink" href="#craft">What we make <span>&rsaquo;</span></a>
+      <a class="hg-mlink" href="#craft" data-phone-target="#phone-craft">What we make <span>&rsaquo;</span></a>
       <a href="#contact" class="hg-btn-primary" style="margin-top: 14px;">Book a home visit</a>
     </div>
   </header>
 
+  <!-- Dedicated handset layout; desktop sections remain unchanged. -->
+  <div class="hg-phone-layout">
+    <section class="hg-phone-hero" id="phone-top" aria-labelledby="hg-phone-title">
+      <p class="hg-phone-eyebrow">Bespoke jewellery &middot; Mumbai</p>
+      <h1 class="hg-phone-title" id="hg-phone-title">Jewellery that <em>begins with you.</em></h1>
+      <p class="hg-phone-lead">Share a piece you love, a sketch, or the start of an idea. We come to you and craft it to order, with making charges of 0&ndash;7%.</p>
+      <div class="hg-phone-hero-card">
+        <video id="hgPhoneHeroVideo" muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1758995115331-64458cd842a7?auto=format&amp;fit=crop&amp;w=900&amp;q=82" aria-label="Hansa jewellery in close-up">
+          <source src="Assests/hero-mobile-720p.mp4" type="video/mp4">
+        </video>
+        <button id="hgPhonePause" class="hg-phone-pause" type="button" aria-label="Pause hero video">Pause</button>
+      </div>
+      <div class="hg-phone-hero-actions">
+        <a class="hg-phone-button hg-phone-button-primary" href="#contact">Book a home visit</a>
+        <a class="hg-phone-button hg-phone-button-secondary" href="#phone-how">See how it works</a>
+      </div>
+    </section>
+
+    <div class="hg-phone-chips" aria-label="Hansa jewellery benefits">
+      <span>0&ndash;7% making charges</span><span>Home visits in Mumbai</span><span>BIS hallmarked gold</span><span>Made to order</span>
+    </div>
+
+    <section class="hg-phone-section hg-phone-story" id="phone-about" aria-labelledby="hg-phone-story-title">
+      <p class="hg-phone-eyebrow">ABOUT HANSA</p>
+      <h2 class="hg-phone-heading" id="hg-phone-story-title">A jeweller who comes to you.</h2>
+      <p>Bring a photo, a sketch, or a piece you love. We shape the details together, then craft it to order with fair, clear making charges.</p>
+      <a class="hg-phone-text-link" href="#contact">Plan a home visit <span aria-hidden="true">&rarr;</span></a>
+    </section>
+
+    <section class="hg-phone-section hg-phone-cream" id="phone-craft" aria-labelledby="hg-phone-craft-title">
+      <div class="hg-phone-section-head">
+        <p class="hg-phone-eyebrow">MADE AROUND YOU</p>
+        <h2 class="hg-phone-heading" id="hg-phone-craft-title">Find your piece</h2>
+        <p>Choose a starting point. We will make it yours.</p>
+      </div>
+      <div class="hg-phone-categories">
+        <a class="hg-phone-category hg-phone-ring" href="#contact" data-select-piece="a Ring"><span class="hg-phone-category-name">Rings</span><span class="hg-phone-category-note">Engagement &amp; everyday</span></a>
+        <a class="hg-phone-category hg-phone-necklace" href="#contact" data-select-piece="a Necklace / Pendant"><span class="hg-phone-category-name">Necklaces</span><span class="hg-phone-category-note">Pendants &amp; chains</span></a>
+        <a class="hg-phone-category hg-phone-earrings" href="#contact" data-select-piece="Earrings"><span class="hg-phone-category-name">Earrings</span><span class="hg-phone-category-note">Studs, drops &amp; jhumkas</span></a>
+        <a class="hg-phone-category hg-phone-bangles" href="#contact" data-select-piece="Bangles / Kadas"><span class="hg-phone-category-name">Bangles</span><span class="hg-phone-category-note">Kadas &amp; bracelets</span></a>
+        <a class="hg-phone-category hg-phone-bridal" href="#contact" data-select-piece="a Bridal Set"><span class="hg-phone-category-name">Bridal sets</span><span class="hg-phone-category-note">Complete wedding jewellery</span></a>
+        <a class="hg-phone-category hg-phone-custom" href="#contact" data-select-piece="a custom design">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 7 18l17 26 17-26L24 4ZM7 18h34M17 18l7 26 7-26M17 18l7-14 7 14"/></svg>
+          <span class="hg-phone-category-name">Your own design</span><span class="hg-phone-category-note">Anything you love, made to order</span>
+        </a>
+      </div>
+    </section>
+
   <!-- ==========================================================================
        FULL-SCREEN VIDEO HERO THAT MERGES INTO THE SILK WEBSITE ON SCROLL
        ========================================================================== -->
+    <section class="hg-phone-section" id="phone-how" aria-labelledby="hg-phone-how-title">
+      <div class="hg-phone-section-head">
+        <p class="hg-phone-eyebrow">HOW IT WORKS</p>
+        <h2 class="hg-phone-heading" id="hg-phone-how-title">From idea to your hands</h2>
+        <p>Four simple steps, shaped around you.</p>
+      </div>
+      <div class="hg-phone-steps" aria-label="Swipe through the four steps">
+        <article class="hg-phone-step"><span class="hg-phone-step-number">01</span><span class="hg-phone-step-kicker">CONSULTATION</span><h3>We come to you</h3><p>At home, your office, or wherever you are comfortable.</p></article>
+        <article class="hg-phone-step"><span class="hg-phone-step-number">02</span><span class="hg-phone-step-kicker">YOUR INSPIRATION</span><h3>Share your design</h3><p>A photo, a sketch, or a piece from any brand you love.</p></article>
+        <article class="hg-phone-step"><span class="hg-phone-step-number">03</span><span class="hg-phone-step-kicker">MADE TO ORDER</span><h3>We craft it</h3><p>Made to match your design, in your choice of metal and stones.</p></article>
+        <article class="hg-phone-step"><span class="hg-phone-step-number">04</span><span class="hg-phone-step-kicker">DELIVERY</span><h3>Delivered to you</h3><p>Your finished piece, with making charges of 0&ndash;7%.</p></article>
+      </div>
+      <p class="hg-phone-swipe-hint">Swipe to explore <span aria-hidden="true">&rarr;</span></p>
+    </section>
+
+    <section class="hg-phone-section hg-phone-cream" id="phone-promise" aria-labelledby="hg-phone-promise-title">
+      <div class="hg-phone-section-head">
+        <p class="hg-phone-eyebrow">THE HANSA PROMISE</p>
+        <h2 class="hg-phone-heading" id="hg-phone-promise-title">Crafted with care</h2>
+        <p>Thoughtful service, from first sketch to aftercare.</p>
+      </div>
+      <div class="hg-phone-promises">
+        <article class="hg-phone-promise"><span class="hg-phone-promise-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m24 4 6 5 8-1 2 8 5 6-5 6-2 8-8-1-6 5-6-5-8 1-2-8-5-6 5-6 2-8 8 1 6-5Z"/><path d="m16 24 5 5 11-12"/></svg></span><h3>Hallmarked purity</h3><p>BIS hallmarked gold</p></article>
+        <article class="hg-phone-promise"><span class="hg-phone-promise-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 4 43 17 24 44 5 17 24 4Z"/><path d="M5 17h38M16 17l8 27 8-27M16 17l8-13 8 13"/></svg></span><h3>Certified stones</h3><p>Stone grading shared with your piece</p></article>
+        <article class="hg-phone-promise"><span class="hg-phone-promise-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M13 5h22a3 3 0 0 1 3 3v34l-8-5-6 5-6-5-8 5V8a3 3 0 0 1 3-3Z"/><path d="M17 16h14M17 23h14M17 30h8"/></svg></span><h3>Clear charges</h3><p>0&ndash;7%, explained upfront</p></article>
+        <article class="hg-phone-promise"><span class="hg-phone-promise-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m7 18 12-12 9 9-12 12zM21 20l14 14M28 14l7-7 7 7-7 7M6 41l11-11 7 7-11 11z"/></svg></span><h3>Karigar craft</h3><p>Made to order around your design</p></article>
+        <article class="hg-phone-promise"><span class="hg-phone-promise-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 41S6 31 6 18a10 10 0 0 1 18-5 10 10 0 0 1 18 5c0 13-18 23-18 23Z"/><path d="M24 18v12M18 24h12"/></svg></span><h3>Lifetime care</h3><p>Care requests after delivery</p></article>
+      </div>
+      <div class="hg-phone-qr"><span aria-hidden="true">QR</span><p>Each Hansa box carries a private QR code with your piece's craft story and care details.</p></div>
+    </section>
+  </div>
+
   <section id="top" class="hg-hero-track">
     <div class="hg-hero-sticky">
       <div id="heroStage" class="hg-hero-stage">
         <video id="heroVideo" class="hg-hero-video" autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1758995115331-64458cd842a7?auto=format&fit=crop&w=2200&q=88">
-          <source src="Assests/hero-60fps-1080p.mp4" type="video/mp4">
+          <source src="Assests/hero-60fps-1080p.mp4" type="video/mp4" media="(min-width: 721px)">
         </video>
         <div class="hg-hero-veil"></div>
 
@@ -1333,12 +1414,115 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
 (function(){
   var video=document.getElementById("heroVideo");
   if(!video)return;
+  if(window.matchMedia("(max-width: 720px)").matches){video.pause();video.autoplay=false;video.preload="none";return;}
   video.muted=true;video.loop=true;video.playsInline=true;video.autoplay=true;video.preload="auto";
   function start(){if(!video.paused)return;var result=video.play();if(result&&typeof result.catch==="function")result.catch(function(){});}
   if(video.readyState>=3)start();else video.addEventListener("canplay",start,{once:true});
 })();
 </script>
-<style>.hg-hero-video{display:block!important;visibility:visible!important;opacity:1!important}</style></body>
+<style>.hg-hero-video{display:block!important;visibility:visible!important;opacity:1!important}</style>
+<style id="hansa-phone-layout-styles">
+  .hg-phone-layout{display:none}
+  @media(max-width:720px){
+    html{scroll-padding-top:76px}
+    body.in-hero-cinema .hg-header{position:sticky!important;top:0;background:rgba(250,248,242,.97)!important;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+    body.in-hero-cinema .hg-brand-name{color:var(--ink)!important}
+    body.in-hero-cinema .hg-brand-sub{color:var(--gold-dark)!important}
+    body.in-hero-cinema .hg-logo-svg{color:var(--gold-dark)!important}
+    .hg-phone-layout{display:block;position:relative;z-index:2;background:var(--bg-page);color:var(--ink)}
+    #top,.hg-trust-bar,#about,#process,#craft,.hg-bg{display:none!important}
+    .hg-phone-hero{padding:25px 16px 18px;text-align:center;background:linear-gradient(180deg,var(--bg-page),var(--bg-sec-alt))}
+    .hg-phone-eyebrow{margin:0;color:var(--gold-dark);font:600 10px/1.5 var(--sans);letter-spacing:.2em;text-transform:uppercase}
+    .hg-phone-title{max-width:360px;margin:9px auto 0;color:var(--ink);font:500 clamp(40px,11vw,46px)/1.03 var(--serif);letter-spacing:-.025em;text-wrap:balance}
+    .hg-phone-title em{color:var(--gold-dark);font-weight:500}
+    .hg-phone-lead{max-width:360px;margin:12px auto 0;color:var(--body);font-size:14px;line-height:1.62}
+    .hg-phone-hero-card{position:relative;width:min(100%,520px);aspect-ratio:4/5;margin:19px auto 0;overflow:hidden;border:1px solid var(--gold-border);border-radius:18px;background:#10251e;box-shadow:0 18px 40px rgba(25,55,46,.16)}
+    .hg-phone-hero-card video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover}
+    .hg-phone-pause{position:absolute;right:12px;bottom:12px;min-height:38px;padding:0 14px;border:1px solid rgba(255,240,215,.55);border-radius:999px;background:rgba(15,32,25,.62);color:#fff8ec;font:600 11px var(--sans);letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+    .hg-phone-hero-actions{display:flex;flex-direction:column;gap:10px;width:min(100%,520px);margin:17px auto 0}
+    .hg-phone-button{display:flex;align-items:center;justify-content:center;min-height:49px;padding:0 20px;border:1px solid var(--gold-border);border-radius:999px;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.04em}
+    .hg-phone-button-primary{border-color:var(--btn-bg);background:var(--btn-bg);color:var(--btn-text)}
+    .hg-phone-button-secondary{background:var(--bg-card);color:var(--ink)}
+    .hg-phone-chips{display:flex;gap:8px;overflow-x:auto;padding:16px 16px 18px;background:var(--bg-sec-alt);scrollbar-width:none;overscroll-behavior-x:contain}
+    .hg-phone-chips::-webkit-scrollbar{display:none}
+    .hg-phone-chips span{flex:none;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg-card);color:var(--body);font-size:11px;white-space:nowrap}
+    .hg-phone-section{padding:42px 0 44px;border-top:1px solid var(--line-soft);background:var(--bg-sec-light)}
+    .hg-phone-cream{background:var(--bg-sec-alt)}
+    .hg-phone-story{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding-right:20px;padding-left:20px}
+    .hg-phone-heading{margin:0;color:var(--ink);font:500 34px/1.08 var(--serif);letter-spacing:-.02em}
+    .hg-phone-story>p:not(.hg-phone-eyebrow){max-width:480px;margin:0;color:var(--body);font-size:14px;line-height:1.7}
+    .hg-phone-text-link{display:inline-flex;gap:8px;align-items:center;margin-top:2px;color:var(--gold-dark);font-size:12px;font-weight:700;letter-spacing:.08em;text-decoration:none;text-transform:uppercase}
+    .hg-phone-section-head{display:flex;flex-direction:column;align-items:center;gap:8px;margin:0 auto 22px;padding:0 20px;text-align:center}
+    .hg-phone-section-head .hg-phone-heading{font-size:33px}
+    .hg-phone-section-head>p:last-child{margin:0;color:var(--body);font-size:13px;line-height:1.55}
+    .hg-phone-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 16px}
+    .hg-phone-category{position:relative;isolation:isolate;display:flex;min-width:0;aspect-ratio:1/1.08;flex-direction:column;justify-content:flex-end;gap:5px;overflow:hidden;padding:15px;border:1px solid rgba(255,255,255,.2);border-radius:15px;background-color:#18372e;background-image:linear-gradient(0deg,rgba(8,19,15,.82),rgba(8,19,15,.04) 78%),var(--hg-phone-photo);background-position:center;background-size:cover;color:#fff;text-decoration:none}
+    .hg-phone-category:focus-visible,.hg-phone-button:focus-visible,.hg-phone-pause:focus-visible{outline:2px solid var(--gold-dark);outline-offset:3px}
+    .hg-phone-ring{--hg-phone-photo:url('https://images.unsplash.com/photo-1758995115331-64458cd842a7?auto=format&fit=crop&w=640&q=72')}
+    .hg-phone-necklace{--hg-phone-photo:url('https://images.unsplash.com/photo-1670541481909-0b2c047fb45a?auto=format&fit=crop&w=640&q=72')}
+    .hg-phone-earrings{--hg-phone-photo:url('https://images.unsplash.com/photo-1721103418236-3e314539f849?auto=format&fit=crop&w=640&q=72')}
+    .hg-phone-bangles{--hg-phone-photo:url('https://images.unsplash.com/photo-1758995119744-6454f091303f?auto=format&fit=crop&w=640&q=72')}
+    .hg-phone-bridal{--hg-phone-photo:url('https://images.unsplash.com/photo-1751606615009-30f61ff1a510?auto=format&fit=crop&w=640&q=72')}
+    .hg-phone-category-name{position:relative;color:#fff;font:500 23px/1.05 var(--serif)}
+    .hg-phone-category-note{position:relative;color:rgba(255,255,255,.83);font-size:10px;line-height:1.35}
+    .hg-phone-custom{align-items:center;justify-content:center;gap:9px;border-color:var(--gold-border);background:linear-gradient(145deg,#1f4d40,#102a22);text-align:center}
+    .hg-phone-custom svg{width:38px;height:38px;fill:none;stroke:var(--gold-light);stroke-width:1.7;stroke-linejoin:round}
+    .hg-phone-custom .hg-phone-category-name{font-size:21px}
+    .hg-phone-steps{display:flex;gap:12px;overflow-x:auto;padding:0 16px 6px;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+    .hg-phone-steps::-webkit-scrollbar{display:none}
+    .hg-phone-step{display:flex;flex:0 0 80%;min-height:205px;flex-direction:column;gap:8px;padding:20px;border:1px solid var(--line);border-radius:16px;background:var(--bg-card);box-shadow:0 12px 28px rgba(25,55,46,.06);scroll-snap-align:center}
+    .hg-phone-step-number{color:var(--gold-dark);font:500 34px/1 var(--serif)}
+    .hg-phone-step-kicker{color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.16em}
+    .hg-phone-step h3{margin:0;color:var(--ink);font:500 24px/1.15 var(--serif)}
+    .hg-phone-step p{margin:0;color:var(--body);font-size:13px;line-height:1.55}
+    .hg-phone-swipe-hint{margin:10px 0 0;text-align:center;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+    .hg-phone-promises{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:0 16px}
+    .hg-phone-promise{display:flex;min-height:154px;flex-direction:column;align-items:center;justify-content:center;padding:16px 10px;border:1px solid var(--line);border-radius:14px;background:var(--bg-card);text-align:center}
+    .hg-phone-promise:last-child{grid-column:span 2;min-height:136px}
+    .hg-phone-promise-icon{display:flex;width:52px;height:52px;align-items:center;justify-content:center;border:1px solid var(--gold-border);border-radius:50%;background:var(--bg-page)}
+    .hg-phone-promise-icon svg{width:27px;height:27px;fill:none;stroke:var(--gold-dark);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .hg-phone-promise h3{margin:9px 0 3px;color:var(--ink);font:500 19px/1.12 var(--serif)}
+    .hg-phone-promise p{max-width:180px;margin:0;color:var(--muted);font-size:10px;line-height:1.45}
+    .hg-phone-qr{display:flex;align-items:center;gap:13px;margin:18px 16px 0;padding:15px 16px;border-left:2px solid var(--gold-light);background:linear-gradient(135deg,#17382e,#0c261e);color:#f8f3e8}
+    .hg-phone-qr>span{display:flex;width:38px;height:38px;flex:none;align-items:center;justify-content:center;border:1px solid var(--gold-light);color:var(--gold-light);font:600 10px var(--sans);letter-spacing:.08em}
+    .hg-phone-qr p{margin:0;color:rgba(255,255,255,.82);font-size:11px;line-height:1.5}
+    #pricing .hg-pricing-layout{display:flex;flex-direction:column;gap:28px;padding:58px 16px}
+    #pricing .hg-pricing-copy{align-items:flex-start;text-align:left}
+    #pricing .hg-pricing-copy .hg-h2{font-size:36px!important}
+    #pricing .hg-card{width:100%;padding:22px 16px}
+  }
+  @media(max-width:360px){.hg-phone-title{font-size:39px}.hg-phone-category{padding:12px}.hg-phone-category-name{font-size:21px}.hg-phone-step{flex-basis:84%}}
+</style>
+<script id="hansa-phone-layout-behavior">
+(function(){
+  var phoneQuery=window.matchMedia('(max-width:720px)');
+  var responsiveLinks=document.querySelectorAll('#mobilePanel [data-phone-target],.hg-brand[data-phone-target]');
+  function syncPhoneLinks(){
+    responsiveLinks.forEach(function(link){
+      if(!link.hasAttribute('data-desktop-target'))link.setAttribute('data-desktop-target',link.getAttribute('href'));
+      link.setAttribute('href',phoneQuery.matches?link.getAttribute('data-phone-target'):link.getAttribute('data-desktop-target'));
+    });
+  }
+  syncPhoneLinks();
+  if(phoneQuery.addEventListener)phoneQuery.addEventListener('change',syncPhoneLinks);else if(phoneQuery.addListener)phoneQuery.addListener(syncPhoneLinks);
+  var video=document.getElementById('hgPhoneHeroVideo'),pauseButton=document.getElementById('hgPhonePause');
+  if(!video||!pauseButton)return;
+  var userPaused=false,inView=false,reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function syncVideo(){
+    if(!phoneQuery.matches||!inView||document.hidden||userPaused||reducedMotion){video.pause();return;}
+    var request=video.play();if(request&&request.catch)request.catch(function(){});
+  }
+  video.addEventListener('play',function(){pauseButton.textContent='Pause';pauseButton.setAttribute('aria-label','Pause hero video');});
+  video.addEventListener('pause',function(){pauseButton.textContent='Play';pauseButton.setAttribute('aria-label','Play hero video');});
+  pauseButton.addEventListener('click',function(){userPaused=!video.paused; if(!video.paused){userPaused=true;video.pause();}else{userPaused=false;inView=true;syncVideo();}});
+  document.addEventListener('visibilitychange',syncVideo);
+  if('IntersectionObserver' in window){
+    var observer=new IntersectionObserver(function(entries){inView=!!(entries[0]&&entries[0].isIntersecting);syncVideo();},{threshold:.3});
+    observer.observe(video);
+  }else{inView=true;syncVideo();}
+  if(phoneQuery.addEventListener)phoneQuery.addEventListener('change',function(){if(!phoneQuery.matches){video.pause();userPaused=false;}else syncVideo();});
+})();
+</script></body>
 </html>
 
 
