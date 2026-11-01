@@ -1532,7 +1532,7 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
 #phone-how.hkp-host .hkp-side{display:none}
 </style>
 <style id="hkp-phone-fit-styles">
-@media (max-width:720px){
+@media(max-width:720px){
 #phone-how.hkp-host .hkp-phone{width:min(100%,31vh);max-width:280px}
 #phone-how.hkp-host .hkp-cta{display:none}
 }
@@ -1543,11 +1543,16 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
 .hg-footer .hg-foot-brand{font:italic 500 clamp(54px,6.2vw,90px)/.96 var(--serif);letter-spacing:-.025em;color:#000!important}
 .hg-footer .hg-foot-tagline{display:block;width:100%;text-align:center;font:italic 500 clamp(58px,6.8vw,96px)/.96 var(--serif);letter-spacing:-.025em;color:var(--gold-dark)}
 .hg-footer .hg-foot-meta{justify-self:end;align-self:end;margin-bottom:5px;font-size:16px;line-height:1.5}
+@media(min-width:1024px){
+  .hg-footer .hg-foot{grid-template-columns:minmax(0,1fr) 220px;grid-template-rows:auto auto;row-gap:8px}
+  .hg-footer .hg-foot-meta{grid-column:1/-1;grid-row:2;justify-self:stretch;align-self:start;margin:0 0 0 calc(37.5% + 2.2em);font:italic 500 clamp(54px,6.2vw,90px)/.96 var(--serif);letter-spacing:-.025em;color:#000!important}
+}
 @media(max-width:720px){
-  .hg-footer .hg-foot{grid-template-columns:minmax(0,1fr);min-height:460px;align-items:stretch;justify-content:center;padding:32px 20px 100px!important;gap:18px}
-  .hg-footer .hg-foot-brand{font-size:clamp(42px,10.5vw,58px)}
+  .hg-footer .hg-foot{grid-template-columns:minmax(0,1fr);min-height:460px;align-items:stretch;align-content:center;justify-content:center;padding:32px 20px 100px!important;gap:8px}
+  .hg-footer .hg-foot-branding{align-items:center}
+  .hg-footer .hg-foot-brand{font-size:clamp(42px,10.5vw,58px);text-align:center}
   .hg-footer .hg-foot-tagline{font-size:clamp(48px,11.5vw,64px)}
-  .hg-footer .hg-foot-meta{justify-self:start;align-self:start;margin:8px 0 0;font-size:13px}
+  .hg-footer .hg-foot-meta{justify-self:center;align-self:start;margin:0;text-align:center;font:italic 500 clamp(15px,4vw,18px)/1.3 var(--serif);letter-spacing:.015em;color:#000!important}
 }
 </style>
 
@@ -1693,7 +1698,7 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
         <span class="hg-foot-brand">Hehank.in</span>
         <span class="hg-foot-tagline">Wear with pride</span>
       </div>
-      <span class="hg-foot-meta">Bespoke jewellery &middot; Made to order</span>
+      <span class="hg-foot-meta">Bespoke jewellery</span>
     </div>
   </footer>
 
@@ -1941,7 +1946,7 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
   @media(max-width:720px){
     html{scroll-padding-top:76px}
     body.in-hero-cinema .hg-header{position:sticky!important;top:0;background:rgba(250,248,242,.97)!important;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
-    body.in-hero-cinema .hg-brand-name{color:var(--ink)!important}
+    body.in-hero-cinema .hg-brand-name{font-family:var(--serif)!important;font-weight:500!important;letter-spacing:.05em!important;background:linear-gradient(110deg,var(--ink) 32%,var(--gold-bright) 50%,var(--ink) 68%)!important;background-size:220% 100%!important;-webkit-background-clip:text!important;background-clip:text!important;-webkit-text-fill-color:transparent!important;color:var(--ink)!important;animation:none!important;background-position:center!important}
     body.in-hero-cinema .hg-brand-sub{color:var(--gold-dark)!important}
     body.in-hero-cinema .hg-logo-svg{color:var(--gold-dark)!important}
     .hg-phone-layout{display:block;position:relative;z-index:2;background:var(--bg-page);color:var(--ink)}
