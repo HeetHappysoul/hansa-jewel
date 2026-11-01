@@ -913,6 +913,9 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
       <a class="hg-phone-text-link" href="#contact">Plan a home visit <span aria-hidden="true">&rarr;</span></a>
     </section>
 
+    <section class="hg-phone-section hkp-host" id="phone-how" aria-label="How it works"><div data-hkp-slot="phone"></div></section>
+
+
     <section class="hg-phone-section hg-phone-cream" id="phone-craft" aria-labelledby="hg-phone-craft-title">
       <div class="hg-phone-section-head">
         <p class="hg-phone-eyebrow">MADE AROUND YOU</p>
@@ -930,24 +933,6 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
           <span class="hg-phone-category-name">Your own design</span><span class="hg-phone-category-note">Anything you love, made to order</span>
         </a>
       </div>
-    </section>
-
-  <!-- ==========================================================================
-       FULL-SCREEN VIDEO HERO THAT MERGES INTO THE SILK WEBSITE ON SCROLL
-       ========================================================================== -->
-    <section class="hg-phone-section" id="phone-how" aria-labelledby="hg-phone-how-title">
-      <div class="hg-phone-section-head">
-        <p class="hg-phone-eyebrow">HOW IT WORKS</p>
-        <h2 class="hg-phone-heading" id="hg-phone-how-title">From idea to your hands</h2>
-        <p>Four simple steps, shaped around you.</p>
-      </div>
-      <div class="hg-phone-steps" aria-label="Swipe through the four steps">
-        <article class="hg-phone-step"><span class="hg-phone-step-number">01</span><span class="hg-phone-step-kicker">CONSULTATION</span><h3>We come to you</h3><p>At home, your office, or wherever you are comfortable.</p></article>
-        <article class="hg-phone-step"><span class="hg-phone-step-number">02</span><span class="hg-phone-step-kicker">YOUR INSPIRATION</span><h3>Share your design</h3><p>A photo, a sketch, or a piece from any brand you love.</p></article>
-        <article class="hg-phone-step"><span class="hg-phone-step-number">03</span><span class="hg-phone-step-kicker">MADE TO ORDER</span><h3>We craft it</h3><p>Made to match your design, in your choice of metal and stones.</p></article>
-        <article class="hg-phone-step"><span class="hg-phone-step-number">04</span><span class="hg-phone-step-kicker">DELIVERY</span><h3>Delivered to you</h3><p>Your finished piece, with making charges of 0&ndash;7%.</p></article>
-      </div>
-      <p class="hg-phone-swipe-hint">Swipe to explore <span aria-hidden="true">&rarr;</span></p>
     </section>
 
     <section class="hg-phone-section hg-phone-cream" id="phone-promise" aria-labelledby="hg-phone-promise-title">
@@ -1025,20 +1010,532 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
   </section>
 
   <!-- How It Works -->
-  <section id="process" class="hg-section-cream">
-    <div class="hg-sec hg-process-layout">
-      <div class="hg-sec-head">
-        <span class="hg-eyebrow">HOW IT WORKS</span>
-        <h2 class="hg-h2">From your idea to your hands</h2>
-      </div>
-      <div class="hg-steps">
-        <div class="hg-step"><span class="hg-stepn">01</span><h3>We come to you</h3><p>At your home, office or wherever you are comfortable.</p></div>
-        <div class="hg-step"><span class="hg-stepn">02</span><h3>Share your design</h3><p>A photo, a sketch, or a piece from any brand you love.</p></div>
-        <div class="hg-step"><span class="hg-stepn">03</span><h3>We craft it</h3><p>Made to match your design, often better, in your choice of metal and stones.</p></div>
-        <div class="hg-step"><span class="hg-stepn">04</span><h3>Delivered to you</h3><p>Your finished piece, at making charges of 0&ndash;7%.</p></div>
-      </div>
+  <section id="process" class="hg-section-cream hkp-host">
+    <div data-hkp-slot="desk">
+<!-- ============================================================
+     HEHANKA "HOW IT WORKS" ANIMATION (website version)
+     Paste this whole block where you want it on the page,
+     e.g. inside or in place of your "How it works" section.
+     Uses the Cormorant Garamond + Manrope fonts your site already loads.
+     ============================================================ -->
+<style>
+.hkp{position:relative;z-index:1;padding:72px max(20px, env(safe-area-inset-right, 0px)) 72px max(20px, env(safe-area-inset-left, 0px));background:#FFFDF8;font-family:'Manrope',system-ui,sans-serif;color:#1F1B16}
+.hkp-head{text-align:center;max-width:720px;margin:0 auto 36px}
+.hkp-eyebrow{font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:#7A5C22}
+.hkp-h2{margin:10px 0 0;font:500 clamp(34px,4.4vw,52px)/1.08 'Cormorant Garamond',Georgia,serif;text-wrap:balance}
+.hkp-h2 em{color:#7A5C22}
+.hkp-row{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;gap:44px;align-items:center;justify-content:center}
+.hkp-phone{position:relative;flex:0 1 360px;min-width:0;border-radius:28px;overflow:hidden;border:1px solid #ECE2CC;background:#fff;box-shadow:0 18px 40px -24px rgba(90,66,22,.45)}
+.hkp-phone canvas{display:block;width:100%;height:auto;aspect-ratio:9/16}
+.hkp-bar{height:3px;background:#ECE2CC}.hkp-bar i{display:block;height:100%;width:0;background:#B8913F}
+.hkp-steps{flex:1 1 360px;min-width:0;list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.hkp-side{flex:1 1 380px;min-width:0;max-width:520px;display:flex;flex-direction:column}
+.hkp-side .hkp-steps{flex:none}
+.hkp-sub{margin:0 0 14px;font-size:14px;color:#4A4237}
+.hkp-side .hkp-cta{margin:28px 0 0}
+.hkp-step{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 14px;width:100%;text-align:left;background:transparent;border:0;border-top:1px solid #ECE2CC;padding:16px 6px;cursor:pointer;font:inherit;color:inherit;border-radius:0;transition:background .3s ease}
+.hkp-steps li:last-child .hkp-step{border-bottom:1px solid #ECE2CC}
+.hkp-step .n{grid-row:span 2;font:500 30px/1 'Cormorant Garamond',Georgia,serif;color:#B8913F}
+.hkp-step b{font:500 24px/1.15 'Cormorant Garamond',Georgia,serif}
+.hkp-step span{font-size:14.5px;line-height:1.55;color:#4A4237}
+.hkp-step[aria-current="true"]{background:#FBF6EA}
+.hkp-step[aria-current="true"] b{color:#7A5C22}
+.hkp-step:focus-visible,.hkp-cta:focus-visible{outline:2px solid #B8913F;outline-offset:2px}
+.hkp-cta{display:flex;align-items:center;justify-content:center;width:fit-content;min-height:50px;margin:32px auto 0;padding:0 28px;border-radius:999px;background:#1F1B16;color:#FFFFFF !important;font-weight:600;font-size:15px;text-decoration:none}
+@media (max-width:720px){.hkp{padding-top:44px;padding-bottom:48px}.hkp-head{margin-bottom:22px}.hkp-row{gap:20px}.hkp-sub,.hkp-steps{display:none}.hkp-phone{flex:0 1 auto;width:100%;max-width:300px}.hkp-side{flex:1 1 100%;align-items:center;max-width:none}.hkp-side .hkp-cta{margin:0;width:100%;max-width:300px}}
+</style>
+
+<section class="hkp" id="how-it-works-film" aria-label="How Hehanka works">
+  <div class="hkp-head">
+    <span class="hkp-eyebrow">How it works</span>
+    <h2 class="hkp-h2">From your home <em>to your hands</em></h2>
+  </div>
+  <div class="hkp-row">
+    <div class="hkp-phone">
+      <canvas id="hkpCanvas" width="720" height="1280" role="img" aria-label="Animation: we visit your home, you choose or show a design, you get an honest quote, our own team makes it, and it is hand-delivered"></canvas>
+      <div class="hkp-bar"><i id="hkpProg"></i></div>
+    </div>
+    <div class="hkp-side">
+    <p class="hkp-sub">Watch it play, or tap a step to jump there.</p>
+    <ol class="hkp-steps">
+      <li><button type="button" class="hkp-step" data-s="3.5"><span class="n">01</span><b>We come to you</b><span>At home, the office, or wherever you're comfortable.</span></button></li>
+      <li><button type="button" class="hkp-step" data-s="8"><span class="n">02</span><b>Choose your design</b><span>Pick from ours, or show us a photo, a sketch or a piece you own.</span></button></li>
+      <li><button type="button" class="hkp-step" data-s="13"><span class="n">03</span><b>An honest quote</b><span>Gold, stones and 0&ndash;7% making charges, all in writing.</span></button></li>
+      <li><button type="button" class="hkp-step" data-s="17.5"><span class="n">04</span><b>Made by our own team</b><span>CAD, casting and stone setting by our karigars.</span></button></li>
+      <li><button type="button" class="hkp-step" data-s="22.5"><span class="n">05</span><b>Hand-delivered</b><span>With the hallmark, certificates and invoice.</span></button></li>
+    </ol>
+  <a class="hkp-cta" href="https://wa.me/919870475119?text=Hi%2C%20I%27d%20like%20to%20book%20a%20home%20visit." target="_blank" rel="noopener">WhatsApp to book a home visit</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const cv = document.getElementById('hkpCanvas');
+  if (!cv) return;
+  const ctx = cv.getContext('2d');
+  const W = 1080, H = 1920, L = 30;
+  const SPEED = 1.75;            // 1 = reel speed; higher = faster (about 17 seconds per loop)
+  const BRAND = 'HEHANKA';       // change if the website uses a different name
+  const SCALE = cv.width / W;
+  const SER = "'Cormorant Garamond', Georgia, serif";
+  const SAN = "'Manrope', system-ui, sans-serif";
+
+  // ---------- helpers ----------
+  const clamp = v => Math.max(0, Math.min(1, v));
+  const ease = x => x < .5 ? 4*x*x*x : 1 - Math.pow(-2*x+2, 3)/2;
+  let t = 0;
+  const seg = (a,b) => clamp((t-a)/(b-a));
+  const E = (a,b) => ease(seg(a,b));
+  const sceneAlpha = (s,e,fi=.45,fo=.45) => Math.min(E(s,s+fi), 1 - E(e-fo,e));
+
+  function text(str, x, y, size, opts={}){
+    ctx.save();
+    ctx.globalAlpha *= (opts.a ?? 1);
+    ctx.font = `${opts.italic?'italic ':''}${opts.weight||400} ${size}px ${opts.font||SER}`;
+    ctx.fillStyle = opts.color || '#1F1B16';
+    ctx.textAlign = opts.align || 'center';
+    ctx.textBaseline = 'alphabetic';
+    if ('letterSpacing' in ctx) ctx.letterSpacing = (opts.ls||0) + 'px';
+    ctx.fillText(str, x, y + (opts.dy||0));
+    ctx.restore();
+  }
+  function sparkle(x, y, r, a){
+    ctx.save(); ctx.globalAlpha *= a; ctx.fillStyle = '#B8913F';
+    ctx.beginPath();
+    ctx.moveTo(x, y-r); ctx.lineTo(x+r*.28, y-r*.28); ctx.lineTo(x+r, y); ctx.lineTo(x+r*.28, y+r*.28);
+    ctx.lineTo(x, y+r); ctx.lineTo(x-r*.28, y+r*.28); ctx.lineTo(x-r, y); ctx.lineTo(x-r*.28, y-r*.28);
+    ctx.closePath(); ctx.fill(); ctx.restore();
+  }
+  function gem(x, y, s, color, lw){
+    ctx.save(); ctx.strokeStyle = color; ctx.lineWidth = lw; ctx.lineJoin = 'round';
+    ctx.beginPath();
+    ctx.moveTo(x, y+s); ctx.lineTo(x-s, y-s*.1); ctx.lineTo(x-s*.55, y-s*.75); ctx.lineTo(x+s*.55, y-s*.75); ctx.lineTo(x+s, y-s*.1); ctx.closePath();
+    ctx.moveTo(x-s, y-s*.1); ctx.lineTo(x+s, y-s*.1);
+    ctx.moveTo(x-s*.55, y-s*.75); ctx.lineTo(x, y-s*.1); ctx.lineTo(x+s*.55, y-s*.75);
+    ctx.stroke(); ctx.restore();
+  }
+
+  // ---------- ring mesh ----------
+  const faces = []; // {v:[[x,y,z]...], kind}
+  const lines = [];
+  (function build(){
+    const R = 1, rr = .075, rz = .17, NU = 64, NV = 12;
+    const P = (i,j) => { const u = 2*Math.PI*i/NU, v = 2*Math.PI*j/NV;
+      return [ (R + rr*Math.cos(v))*Math.cos(u), (R + rr*Math.cos(v))*Math.sin(u), rz*Math.sin(v) ]; };
+    for (let i=0;i<NU;i++) for (let j=0;j<NV;j++){
+      const u = 2*Math.PI*(i+.5)/NU;
+      addFace([P(i,j),P(i+1,j),P(i+1,j+1),P(i,j+1)], 'gold', [R*Math.cos(u), R*Math.sin(u), 0]);
+    }
+    const y0 = R + .33, N = 10, gR = .27, tR = .15;
+    const ring = (r,y,off=0) => Array.from({length:N},(_,k)=>{ const a = 2*Math.PI*(k+off)/N; return [r*Math.cos(a), y, r*Math.sin(a)]; });
+    const T = ring(tR, y0+.11, .5), G = ring(gR, y0), C = [0, y0-.26, 0], inside = [0, y0, 0];
+    addFace(T.slice(), 'gem', inside);
+    for (let k=0;k<N;k++){
+      const k2 = (k+1)%N;
+      addFace([T[k], T[k2], G[k2]], 'gem', inside);
+      addFace([T[k], G[k2], G[k]], 'gem', inside);
+      addFace([G[k], G[k2], C], 'gem', inside);
+    }
+    for (let k=0;k<4;k++){
+      const a = Math.PI/4 + k*Math.PI/2;
+      lines.push([[gR*1.02*Math.cos(a), y0+.03, gR*1.02*Math.sin(a)], [.1*Math.cos(a)*1.4, R+.04, .12*Math.sin(a)*1.3]]);
+    }
+    function addFace(v, kind, inside){
+      const n = normal(v), c = centroid(v);
+      const d = [c[0]-inside[0], c[1]-inside[1], c[2]-inside[2]];
+      if (n[0]*d[0]+n[1]*d[1]+n[2]*d[2] < 0) v.reverse();
+      faces.push({v, kind, id: faces.length});
+    }
+  })();
+  function centroid(v){ const c=[0,0,0]; v.forEach(p=>{c[0]+=p[0];c[1]+=p[1];c[2]+=p[2];}); return c.map(x=>x/v.length); }
+  function normal(v){
+    const a=v[0], b=v[1], c=v[2];
+    const u=[b[0]-a[0],b[1]-a[1],b[2]-a[2]], w=[c[0]-a[0],c[1]-a[1],c[2]-a[2]];
+    const n=[u[1]*w[2]-u[2]*w[1], u[2]*w[0]-u[0]*w[2], u[0]*w[1]-u[1]*w[0]];
+    const l=Math.hypot(n[0],n[1],n[2])||1; return [n[0]/l,n[1]/l,n[2]/l];
+  }
+  const Lt = (()=>{ const v=[-.45,.7,.8], l=Math.hypot(...v); return v.map(x=>x/l); })();
+  const Hh = (()=>{ const v=[Lt[0],Lt[1],Lt[2]+1], l=Math.hypot(...v); return v.map(x=>x/l); })();
+  const mix = (a,b,k)=>a.map((x,i)=>Math.round(x+(b[i]-x)*k));
+
+  function drawRing(cx, cy, scale, ang, tilt, solid, wireA){
+    const ca=Math.cos(ang), sa=Math.sin(ang), ct=Math.cos(tilt), st=Math.sin(tilt), D=6;
+    const tf = p => { const x=p[0]*ca + p[2]*sa, z0=-p[0]*sa + p[2]*ca;
+      const y=p[1]*ct - z0*st, z=p[1]*st + z0*ct; return [x,y,z]; };
+    const pr = q => { const s = D/(D - q[2]); return [cx + q[0]*scale*s, cy - q[1]*scale*s]; };
+    const items = [];
+    for (const f of faces){
+      const q = f.v.map(tf), n = normal(q);
+      const z = q.reduce((s,p)=>s+p[2],0)/q.length;
+      items.push({type:'f', f, q, n, z});
+    }
+    for (const l of lines){ const q = l.map(tf); items.push({type:'l', q, z:(q[0][2]+q[1][2])/2}); }
+    items.sort((a,b)=>a.z-b.z);
+
+    if (wireA > 0){
+      ctx.save(); ctx.lineWidth = 1.3; ctx.strokeStyle = '#7A5C22';
+      for (const it of items){
+        if (it.type !== 'f') continue;
+        ctx.globalAlpha = wireA * (it.n[2] > 0 ? .7 : .16);
+        const p = it.q.map(pr); ctx.beginPath(); ctx.moveTo(p[0][0],p[0][1]);
+        for (let k=1;k<p.length;k++) ctx.lineTo(p[k][0],p[k][1]); ctx.closePath(); ctx.stroke();
+      }
+      ctx.globalAlpha = wireA; ctx.lineWidth = 3;
+      for (const it of items){ if (it.type!=='l') continue; const a=pr(it.q[0]), b=pr(it.q[1]); ctx.beginPath(); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); ctx.stroke(); }
+      ctx.restore();
+    }
+    if (solid > 0){
+      ctx.save(); ctx.globalAlpha = solid; ctx.lineJoin = 'round';
+      for (const it of items){
+        if (it.type === 'l'){
+          const a=pr(it.q[0]), b=pr(it.q[1]);
+          ctx.strokeStyle = '#C9A24D'; ctx.lineWidth = 9; ctx.lineCap='round';
+          ctx.beginPath(); ctx.moveTo(a[0],a[1]); ctx.lineTo(b[0],b[1]); ctx.stroke(); continue;
+        }
+        if (it.n[2] <= 0) continue;
+        const dif = Math.max(0, it.n[0]*Lt[0]+it.n[1]*Lt[1]+it.n[2]*Lt[2]);
+        const spec = Math.pow(Math.max(0, it.n[0]*Hh[0]+it.n[1]*Hh[1]+it.n[2]*Hh[2]), 28);
+        let col;
+        if (it.f.kind === 'gold'){
+          const b = clamp(.16 + .62*dif + .9*spec);
+          col = b < .6 ? mix([92,62,18],[201,160,72], b/.6) : mix([201,160,72],[255,238,186], (b-.6)/.4);
+        } else {
+          const fl = .5 + .5*Math.sin(t*7 + it.f.id*1.7);
+          const b = clamp(.55 + .35*dif + .8*spec + .25*fl - .15);
+          col = mix([170,182,198],[255,255,255], b);
+          if ((it.f.id % 7) === 0) col = mix(col, [255,236,210], .35*fl);
+        }
+        const c = `rgb(${col[0]},${col[1]},${col[2]})`;
+        ctx.fillStyle = c; ctx.strokeStyle = c; ctx.lineWidth = 1.2;
+        const p = it.q.map(pr); ctx.beginPath(); ctx.moveTo(p[0][0],p[0][1]);
+        for (let k=1;k<p.length;k++) ctx.lineTo(p[k][0],p[k][1]); ctx.closePath(); ctx.fill(); ctx.stroke();
+      }
+      ctx.restore();
+    }
+  }
+
+  // ---------- extra drawing helpers ----------
+  const GOLD = '#B8913F', GOLD_D = '#7A5C22', INK = '#1F1B16', BODY = '#4A4237', LINE = '#E6DAC0';
+  function card(x, y, w, h, r, fill, stroke, lw){
+    ctx.save(); roundRect(x, y, w, h, r);
+    ctx.fillStyle = fill || '#FFFFFF'; ctx.shadowColor = 'rgba(90,66,22,0.10)'; ctx.shadowBlur = 30; ctx.shadowOffsetY = 12; ctx.fill();
+    ctx.shadowColor = 'transparent'; ctx.strokeStyle = stroke || LINE; ctx.lineWidth = lw || 2; ctx.stroke(); ctx.restore();
+  }
+  function check(x, y, s, color, k){
+    if (k <= 0) return;
+    ctx.save(); ctx.strokeStyle = color || GOLD; ctx.lineWidth = s * .16; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    ctx.beginPath(); ctx.arc(x, y, s, 0, Math.PI * 2); ctx.globalAlpha *= k; ctx.stroke();
+    const p = [[x - s * .45, y + s * .02], [x - s * .1, y + s * .38], [x + s * .5, y - s * .35]];
+    const d1 = Math.hypot(p[1][0]-p[0][0], p[1][1]-p[0][1]), d2 = Math.hypot(p[2][0]-p[1][0], p[2][1]-p[1][1]);
+    let b = (d1 + d2) * k;
+    ctx.beginPath(); ctx.moveTo(p[0][0], p[0][1]);
+    if (b <= d1) ctx.lineTo(p[0][0] + (p[1][0]-p[0][0]) * b / d1, p[0][1] + (p[1][1]-p[0][1]) * b / d1);
+    else { ctx.lineTo(p[1][0], p[1][1]); b -= d1; ctx.lineTo(p[1][0] + (p[2][0]-p[1][0]) * b / d2, p[1][1] + (p[2][1]-p[1][1]) * b / d2); }
+    ctx.stroke(); ctx.restore();
+  }
+  function stepHeader(n, l1, l2, a){
+    text('STEP ' + n + ' OF 5', W/2, 250, 30, {font:SAN, weight:600, color:'#9C7A30', ls:8, a});
+    text(l1, W/2, 380, 92, {a});
+    if (l2) text(l2, W/2, 476, 92, {italic:true, color:GOLD_D, a});
+  }
+  function stepDots(cur, a){
+    for (let i = 0; i < 5; i++){
+      const x = W/2 + (i - 2) * 64, y = 1760, s = 11;
+      ctx.save(); ctx.globalAlpha *= a; ctx.translate(x, y); ctx.rotate(Math.PI / 4);
+      ctx.strokeStyle = GOLD; ctx.lineWidth = 2.5; ctx.strokeRect(-s/2, -s/2, s, s);
+      if (i <= cur){ ctx.fillStyle = GOLD; ctx.fillRect(-s/2, -s/2, s, s); }
+      ctx.restore();
+    }
+  }
+  function icon(kind, cx, cy, s, color){
+    ctx.save(); ctx.strokeStyle = color || GOLD_D; ctx.lineWidth = 4; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    ctx.beginPath();
+    if (kind === 'ring'){ ctx.arc(cx, cy + s*.18, s*.5, 0, Math.PI*2); ctx.moveTo(cx, cy - s*.32); ctx.lineTo(cx - s*.22, cy - s*.55); ctx.lineTo(cx - s*.1, cy - s*.72); ctx.lineTo(cx + s*.1, cy - s*.72); ctx.lineTo(cx + s*.22, cy - s*.55); ctx.closePath(); }
+    if (kind === 'pendant'){ ctx.moveTo(cx - s*.7, cy - s*.75); ctx.quadraticCurveTo(cx, cy - s*.05, cx + s*.7, cy - s*.75); ctx.moveTo(cx, cy - s*.18); ctx.bezierCurveTo(cx - s*.4, cy + s*.25, cx - s*.25, cy + s*.7, cx, cy + s*.7); ctx.bezierCurveTo(cx + s*.25, cy + s*.7, cx + s*.4, cy + s*.25, cx, cy - s*.18); }
+    if (kind === 'earring'){ ctx.moveTo(cx - s*.18, cy - s*.62); ctx.bezierCurveTo(cx - s*.18, cy - s*.9, cx + s*.2, cy - s*.9, cx + s*.2, cy - s*.62); ctx.bezierCurveTo(cx + s*.2, cy - s*.45, cx, cy - s*.42, cx, cy - s*.3); ctx.moveTo(cx, cy - s*.3); ctx.lineTo(cx - s*.3, cy + s*.15); ctx.lineTo(cx, cy + s*.78); ctx.lineTo(cx + s*.3, cy + s*.15); ctx.closePath(); ctx.moveTo(cx - s*.3, cy + s*.15); ctx.lineTo(cx + s*.3, cy + s*.15); }
+    if (kind === 'bangle'){ ctx.arc(cx, cy, s*.62, 0, Math.PI*2); ctx.moveTo(cx + s*.46, cy); ctx.arc(cx, cy, s*.46, 0, Math.PI*2); }
+    ctx.stroke(); ctx.restore();
+  }
+  function bez(p0, p1, p2, p3, k){ const u = 1 - k; return [u*u*u*p0[0] + 3*u*u*k*p1[0] + 3*u*k*k*p2[0] + k*k*k*p3[0], u*u*u*p0[1] + 3*u*u*k*p1[1] + 3*u*k*k*p2[1] + k*k*k*p3[1]]; }
+  function pin(x, y, s){
+    ctx.save(); ctx.fillStyle = GOLD; ctx.beginPath();
+    ctx.moveTo(x, y); ctx.bezierCurveTo(x - s*.9, y - s*1.1, x - s*.75, y - s*2.1, x, y - s*2.1); ctx.bezierCurveTo(x + s*.75, y - s*2.1, x + s*.9, y - s*1.1, x, y); ctx.fill();
+    ctx.fillStyle = '#FFFFFF'; ctx.beginPath(); ctx.arc(x, y - s*1.4, s*.32, 0, Math.PI*2); ctx.fill(); ctx.restore();
+  }
+
+  // ---------- frame ----------
+  function frame(){
+    ctx.setTransform(SCALE,0,0,SCALE,0,0);
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#FFFFFF'; ctx.fillRect(0,0,W,H);
+    const g = ctx.createRadialGradient(W/2, H*.48, 100, W/2, H*.48, 1200);
+    g.addColorStop(0,'#FFFFFF'); g.addColorStop(1,'#F6F0E3'); ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
+    const tw = .5 + .5 * Math.sin(t * 4);
+
+    // 0. Hook
+    let a = sceneAlpha(0, 3.5, .01);
+    if (a > 0){
+      ctx.save(); ctx.globalAlpha = a;
+      gem(W/2, 560, 38, GOLD, 3);
+      text('From your home', W/2, 800, 108, {a:E(.15,.8), dy:(1-E(.15,.8))*24});
+      text('to your hands.', W/2, 925, 108, {italic:true, color:GOLD_D, a:E(.45,1.1), dy:(1-E(.45,1.1))*24});
+      text('HOW ' + BRAND + ' WORKS', W/2, 1120, 34, {font:SAN, weight:600, color:'#9C7A30', ls:10, a:E(1.3,1.9)});
+      text('5 simple steps', W/2, 1190, 44, {font:SAN, color:BODY, a:E(1.6,2.2)});
+      sparkle(230, 620, 26, tw*E(.2,1)); sparkle(860, 1330, 20, (1-tw)*E(.6,1.4)); sparkle(880, 540, 14, tw*E(1,1.6));
+      ctx.restore();
+    }
+
+    // 1. We visit you
+    a = sceneAlpha(3.5, 8);
+    if (a > 0){
+      ctx.save(); ctx.globalAlpha = a;
+      stepHeader(1, 'We come to you.', null, 1);
+      drawHouse(W/2, 960, E(3.8,5.3));
+      const p0 = [70, 1420], p1 = [260, 1500], p2 = [420, 1330], p3 = [W/2, 1290];
+      const k = E(5.0,6.6);
+      ctx.save(); ctx.strokeStyle = GOLD; ctx.lineWidth = 5; ctx.setLineDash([2, 18]); ctx.lineCap = 'round';
+      ctx.beginPath(); ctx.moveTo(p0[0], p0[1]);
+      for (let i = 1; i <= 40; i++){ const q = bez(p0, p1, p2, p3, k * i / 40); ctx.lineTo(q[0], q[1]); }
+      ctx.stroke(); ctx.restore();
+      if (k > 0){ const q = bez(p0, p1, p2, p3, k); pin(q[0], q[1] - 6, 30); }
+      text('Home, office, or wherever', W/2, 1530, 50, {font:SAN, color:BODY, a:E(6,6.6)});
+      text('you are comfortable.', W/2, 1600, 50, {font:SAN, color:BODY, a:E(6.2,6.8)});
+      stepDots(0, 1);
+      ctx.restore();
+    }
+
+    // 2. Choose the design
+    a = sceneAlpha(8, 13);
+    if (a > 0){
+      ctx.save(); ctx.globalAlpha = a;
+      stepHeader(2, 'Choose your', 'design.', 1);
+      const c1 = E(8.4,9.2), c2 = E(9.2,10);
+      // left card: our designs
+      ctx.save(); ctx.globalAlpha *= c1; ctx.translate(0, (1-c1)*60);
+      card(80, 620, 440, 640, 30);
+      text('Pick from ours', 300, 700, 38, {font:SAN, weight:600});
+      const kinds = ['ring','pendant','earring','bangle'];
+      const pick = E(10.6,11.1);
+      kinds.forEach((kd, i) => {
+        const cx = 190 + (i % 2) * 220, cy = 850 + Math.floor(i / 2) * 230;
+        const sel = i === 0 && pick > 0;
+        ctx.save(); roundRect(cx - 95, cy - 100, 190, 200, 22);
+        ctx.fillStyle = sel ? 'rgba(232,211,163,' + (.5 * pick).toFixed(2) + ')' : '#FBF7EE'; ctx.fill();
+        ctx.strokeStyle = sel ? GOLD : LINE; ctx.lineWidth = sel ? 4 : 2; ctx.stroke(); ctx.restore();
+        icon(kd, cx, cy, 64);
+        if (sel) check(cx + 70, cy - 76, 22, GOLD_D, pick);
+      });
+      ctx.restore();
+      // "or"
+      // right card: your own
+      ctx.save(); ctx.globalAlpha *= c2; ctx.translate(0, (1-c2)*60);
+      card(560, 620, 440, 640, 30);
+      text('Or show us yours', 780, 700, 38, {font:SAN, weight:600});
+      card(660, 750, 240, 440, 34, INK, INK, 2);
+      ctx.save(); roundRect(674, 778, 212, 384, 22); ctx.fillStyle = '#F3EADA'; ctx.fill(); ctx.restore();
+      icon('ring', 780, 990, 90, GOLD_D);
+      const flash = t > 11.4 && t < 11.9 ? 1 - seg(11.4, 11.9) : 0;
+      if (flash > 0){ ctx.save(); ctx.globalAlpha *= flash; roundRect(674, 778, 212, 384, 22); ctx.fillStyle = '#FFFFFF'; ctx.fill(); ctx.restore(); }
+      if (t > 11.6) check(860, 800, 22, GOLD_D, E(11.6,12.1));
+      ctx.restore();
+      text('A photo, a sketch, or a', W/2, 1400, 50, {font:SAN, color:BODY, a:E(10.2,10.8)});
+      text('piece you already own.', W/2, 1470, 50, {font:SAN, color:BODY, a:E(10.4,11)});
+      stepDots(1, 1);
+      ctx.restore();
+    }
+
+    // 3. The quote
+    a = sceneAlpha(13, 17.5);
+    if (a > 0){
+      ctx.save(); ctx.globalAlpha = a;
+      stepHeader(3, 'An honest quote.', null, 1);
+      const cA = E(13.3,14);
+      ctx.save(); ctx.globalAlpha *= cA; ctx.translate(0, (1-cA)*50);
+      card(150, 600, 780, 780, 34);
+      text('YOUR QUOTE', 220, 690, 30, {font:SAN, weight:600, color:'#9C7A30', ls:6, align:'left'});
+      ctx.fillStyle = LINE; ctx.fillRect(220, 720, 640, 2);
+      const rows = [
+        ['Gold', 'by weight, at the day’s rate', null, 14.0],
+        ['Stones', 'by size and quality', null, 14.6],
+        ['Making charges', 'the craft fee', '0–7%', 15.2]
+      ];
+      rows.forEach((r, i) => {
+        const y = 820 + i * 150, k = E(r[3], r[3] + .5);
+        text(r[0], 220, y, 52, {align:'left', a:k, color: i === 2 ? GOLD_D : INK});
+        text(r[1], 220, y + 50, 30, {font:SAN, color:'#6E6455', align:'left', a:k});
+        if (r[2]) text(r[2], 860, y + 10, 64, {align:'right', a:k, color:GOLD_D, weight:600});
+        else check(830, y - 10, 26, GOLD, k);
+        ctx.save(); ctx.globalAlpha *= k; ctx.fillStyle = LINE; ctx.fillRect(220, y + 82, 640, 2); ctx.restore();
+      });
+      text('Everything in writing.', 540, 1290, 40, {italic:true, color:BODY, a:E(15.8,16.3)});
+      ctx.restore();
+      text('No hidden charges.', W/2, 1530, 64, {italic:true, color:GOLD_D, a:E(16,16.5)});
+      stepDots(2, 1);
+      ctx.restore();
+    }
+
+    // 4. Made by our team
+    a = sceneAlpha(17.5, 22.5);
+    if (a > 0){
+      ctx.save(); ctx.globalAlpha = a;
+      stepHeader(4, 'Made by our', 'own team.', 1);
+      const sIn = E(17.7,18.2), sOut = E(18.9,19.4), st = sIn * (1 - sOut);
+      if (st > 0){
+        ctx.save(); ctx.globalAlpha *= st; ctx.translate(W/2, 860); const sc = .8 + .2 * sIn; ctx.scale(sc, sc); ctx.rotate(-.05);
+        roundRect(-330, -70, 660, 140, 70); ctx.strokeStyle = GOLD_D; ctx.lineWidth = 5; ctx.stroke();
+        ctx.restore();
+        ctx.save(); ctx.globalAlpha *= st; ctx.translate(W/2, 860); ctx.rotate(-.05);
+        text('ORDER CONFIRMED', 40, 14, 38, {font:SAN, weight:700, color:GOLD_D, ls:4});
+        check(-262, 0, 26, GOLD_D, E(18,18.5));
+        ctx.restore();
+      }
+      const rA = E(18.8,19.4);
+      if (rA > 0){
+        ctx.save(); ctx.globalAlpha *= rA;
+        const m = E(20.2,21.4);
+        drawRing(W/2, 1110, 280, (t - 17.5) * .95, .32 + .06 * Math.sin(t * .8), m, 1 - m);
+        if (m > .5){ sparkle(W/2 + 70, 700, 30 * tw, m); sparkle(W/2 - 300, 1010, 16 * (1 - tw), m); }
+        text(m < .5 ? 'CAD DESIGN' : 'CAST AND SET BY HAND', W/2, 1560, 34, {font:SAN, weight:600, color:'#9C7A30', ls:8});
+        ctx.restore();
+      }
+      text('By our own karigars.', W/2, 1640, 50, {font:SAN, color:BODY, a:E(19.6,20.1)});
+      stepDots(3, 1);
+      ctx.restore();
+    }
+
+    // 5. Hand-delivered
+    a = sceneAlpha(22.5, 26.5);
+    if (a > 0){
+      ctx.save(); ctx.globalAlpha = a;
+      stepHeader(5, 'Hand-delivered,', 'with everything.', 1);
+      const lift = E(23.3,24);
+      // box base
+      card(320, 760, 440, 300, 10, '#FFFFFF', '#D9C9A3', 3);
+      ctx.save(); ctx.fillStyle = 'rgba(232,211,163,.45)'; ctx.fillRect(520, 760, 40, 300); ctx.restore();
+      // glow when open
+      if (lift > .3){ sparkle(W/2, 740 - 60 * lift, 26 * tw, lift); sparkle(W/2 - 120, 720, 14 * (1 - tw), lift); sparkle(W/2 + 130, 715, 12 * tw, lift); }
+      // lid
+      ctx.save(); ctx.translate(0, -70 * lift); ctx.rotate(-.06 * lift);
+      card(300, 650, 480, 120, 10, '#FFFFFF', '#D9C9A3', 3);
+      ctx.fillStyle = 'rgba(232,211,163,.45)'; ctx.fillRect(520, 650, 40, 120);
+      text(BRAND, W/2, 726, 40, {color:'#9C7A30', ls:10, weight:500});
+      ctx.restore();
+      const items = ['BIS hallmark (HUID)', 'Stone certificate', 'GST invoice', 'Care guide'];
+      items.forEach((it, i) => {
+        const y = 1190 + i * 92, k = E(24 + i * .4, 24.4 + i * .4);
+        check(290, y - 14, 24, GOLD, k);
+        text(it, 340, y, 46, {font:SAN, color:INK, align:'left', a:k});
+      });
+      text('Delivered to your door.', W/2, 1620, 50, {italic:true, color:GOLD_D, a:E(25.4,25.9)});
+      stepDots(4, 1);
+      ctx.restore();
+    }
+
+    // 6. End card
+    a = Math.min(E(26.5,27), 1 - E(29.6,30));
+    if (a > 0){
+      ctx.save(); ctx.globalAlpha = a;
+      gem(W/2, 560, 40, GOLD, 3);
+      text(BRAND, W/2+10, 760, 132, {color:'#9C7A30', ls:22, weight:500});
+      text('JEWELLERY', W/2+8, 830, 34, {font:SAN, color:'#8C7A55', ls:12, weight:500});
+      text('Your design. Our craft.', W/2, 1010, 70, {italic:true, a:E(27.1,27.7)});
+      text('Book your home visit below.', W/2, 1200, 48, {font:SAN, color:BODY, a:E(27.7,28.3)});
+      sparkle(250, 520, 22, tw); sparkle(840, 600, 16, 1-tw);
+      ctx.restore();
+    }
+  }
+
+  function roundRect(x,y,w,h,r){ r=Math.min(r,h/2,w/2); ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r); ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+
+  function drawHouse(cx, cy, k){
+    const s = 1.15;
+    const pts = [[-200,260],[-200,-40],[0,-230],[200,-40],[200,260],[-200,260]].map(p=>[cx+p[0]*s, cy+p[1]*s]);
+    const door = [[-55,260],[-55,90],[55,90],[55,260]].map(p=>[cx+p[0]*s, cy+p[1]*s]);
+    const win = [[95,-10],[155,-10],[155,50],[95,50],[95,-10]].map(p=>[cx+p[0]*s, cy+p[1]*s]);
+    const paths = [pts, door, win];
+    const lens = paths.map(p=>p.slice(1).reduce((s,q,i)=>s+Math.hypot(q[0]-p[i][0], q[1]-p[i][1]),0));
+    let budget = lens.reduce((a,b)=>a+b,0) * k;
+    ctx.save(); ctx.strokeStyle = '#B8913F'; ctx.lineWidth = 5; ctx.lineJoin='round'; ctx.lineCap='round';
+    for (const p of paths){
+      if (budget <= 0) break;
+      ctx.beginPath(); ctx.moveTo(p[0][0], p[0][1]);
+      for (let i=1;i<p.length;i++){
+        const d = Math.hypot(p[i][0]-p[i-1][0], p[i][1]-p[i-1][1]);
+        if (budget >= d){ ctx.lineTo(p[i][0], p[i][1]); budget -= d; }
+        else { const f = budget/d; ctx.lineTo(p[i-1][0]+(p[i][0]-p[i-1][0])*f, p[i-1][1]+(p[i][1]-p[i-1][1])*f); budget = 0; break; }
+      }
+      ctx.stroke();
+    }
+    if (k > .95){ gem(cx, cy-60, 34, '#7A5C22', 3); }
+    ctx.restore();
+  }
+
+
+
+  // ---------- playback ----------
+  const prog = document.getElementById('hkpProg');
+  const steps = Array.prototype.slice.call(document.querySelectorAll('.hkp-step'));
+  const starts = steps.map(function (b) { return parseFloat(b.getAttribute('data-s')); });
+  let lastStep = -2;
+  function updateUI(){
+    prog.style.width = (t / L * 100).toFixed(2) + '%';
+    let si = -1; starts.forEach(function (s, i) { if (t >= s && t < 26.5) si = i; });
+    if (si !== lastStep){ lastStep = si; steps.forEach(function (b, i) { b.setAttribute('aria-current', i === si ? 'true' : 'false'); }); }
+  }
+  steps.forEach(function (b, i) { b.addEventListener('click', function () { t = starts[i] + 0.01; frame(); updateUI(); }); });
+
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let visible = true, last = null;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { es.forEach(function (e) { visible = e.isIntersecting; last = null; }); }, { threshold: 0.1 }).observe(cv);
+  }
+  function loop(ts){
+    if (visible && !reduce){
+      const prevT = t;
+      let next = t;
+      if (last !== null) next += Math.min(.1, (ts - last) / 1000) * SPEED;
+      last = ts;
+      t = next >= L ? 0 : next;
+      frame(); updateUI();
+    } else { last = null; }
+    requestAnimationFrame(loop);
+  }
+  if (reduce) t = 15.5;
+  const start = function () { frame(); updateUI(); requestAnimationFrame(loop); };
+  if (document.fonts && document.fonts.ready) Promise.race([document.fonts.ready, new Promise(function (r) { setTimeout(r, 1500); })]).then(start);
+  else start();
+})();
+</script>
+<!-- ======================= END OF ANIMATION ======================= -->
     </div>
   </section>
+<script>
+(function(){
+  var film=document.getElementById('how-it-works-film'); if(!film||!window.matchMedia) return;
+  var mq=window.matchMedia('(max-width:720px)');
+  function place(){ var slot=document.querySelector('[data-hkp-slot="'+(mq.matches?'phone':'desk')+'"]'); if(slot&&film.parentNode!==slot) slot.appendChild(film); }
+  place(); if(mq.addEventListener) mq.addEventListener('change',place); else if(mq.addListener) mq.addListener(place);
+})();
+</script>
+<style id="hkp-host-styles">
+#process.hkp-host .hkp,#phone-how.hkp-host .hkp{background:transparent}
+#process.hkp-host .hkp{padding:clamp(64px,6vw,88px) 24px}
+#process.hkp-host .hkp-row{max-width:1040px;gap:72px}
+#process.hkp-host .hkp-phone{flex:0 0 340px}
+#process.hkp-host .hkp-step[aria-current="true"]{background:rgba(255,253,248,.7)}
+#phone-how.hkp-host{padding:0;background:var(--bg-sec-light)}
+#phone-how.hkp-host .hkp{padding:30px 16px 36px}
+#phone-how.hkp-host .hkp-head{margin-bottom:16px}
+#phone-how.hkp-host .hkp-side{display:none}
+</style>
+<style id="hkp-phone-fit-styles">
+@media (max-width:720px){
+#phone-how.hkp-host .hkp-phone{width:min(100%,31vh);max-width:280px}
+#phone-how.hkp-host .hkp-cta{display:none}
+}
+</style>
+
 
   <!-- Making Charges & Gold Calculator -->
   <section id="pricing" class="hg-section-light">
