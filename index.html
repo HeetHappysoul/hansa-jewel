@@ -1677,22 +1677,30 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
         <span class="hg-eyebrow" style="color: var(--gold-light);">BOOK A HOME VISIT</span>
         <h2 class="hg-h2">Have a design in mind? We'll come to you.</h2>
         <p>Send us a photo of the piece you love, or book a visit at your home or wherever you're comfortable.</p>
-        <span class="hg-tags-label">Optional: Select what you're looking to craft</span>
-        <div class="hg-tags">
-          <button type="button" class="hg-tag" data-piece="a Ring">Ring</button>
-          <button type="button" class="hg-tag" data-piece="a Necklace / Pendant">Necklace</button>
-          <button type="button" class="hg-tag" data-piece="Earrings">Earrings</button>
-          <button type="button" class="hg-tag" data-piece="Bangles / Kadas">Bangles</button>
-          <button type="button" class="hg-tag" data-piece="a Bridal Set">Bridal Set</button>
-        </div>
+
+
       </div>
 
       <div class="hg-contact-actions">
-        <a id="waMainBtn" class="hg-wa-btn" href="#contact">WhatsApp us</a>
+        <a id="waMainBtn" class="hg-wa-btn" href="#contact" aria-haspopup="dialog">WhatsApp us</a>
         <a class="hg-call-btn" href="tel:">Call for a private consultation</a>
         <a class="hg-gmb-link" href="#contact">Private consultations in Mumbai</a>
       </div>
     </div>
+    <dialog class="hg-appointment-dialog" id="appointmentDialog" aria-labelledby="appointmentDialogTitle">
+      <form class="hg-appointment-form" id="appointmentForm">
+        <button class="hg-appointment-close" id="closeAppointmentDialog" type="button" aria-label="Close appointment date picker">&times;</button>
+        <span class="hg-eyebrow">PRIVATE CONSULTATION</span>
+        <h2 id="appointmentDialogTitle">Choose a day for your visit</h2>
+        <p>Select your preferred date. WhatsApp will open with your appointment request ready to send.</p>
+        <label for="appointmentDate">Preferred visit date</label>
+        <input id="appointmentDate" name="appointmentDate" type="date" required>
+        <div class="hg-appointment-actions">
+          <button class="hg-appointment-submit" type="submit">Continue to WhatsApp</button>
+          <button class="hg-appointment-cancel" id="cancelAppointmentDialog" type="button">Cancel</button>
+        </div>
+      </form>
+    </dialog>
   </section>
 
   
@@ -2081,6 +2089,125 @@ html.hansa-loader-lock,html.hansa-loader-lock body{overflow:hidden}
 .hg-phone-qr p{color:rgba(248,241,227,.86)}
 </style>
 
+
+<script id="hg-header-section-centering">
+(function(){
+  var links = document.querySelectorAll('.hg-header .hg-links a[href^="#"], .hg-header #mobilePanel .hg-mlink[href^="#"]');
+  var header = document.querySelector('.hg-header');
+  var mobilePanel = document.getElementById('mobilePanel');
+  var menuLabel = document.getElementById('menuLabel');
+  var mobileBar = document.querySelector('.hg-mbar');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function isVisible(element){
+    return !!(element && window.getComputedStyle(element).display !== 'none' && element.getClientRects().length);
+  }
+
+  function centerSection(link, event){
+    if(event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    var href = link.getAttribute('href');
+    if(!href || href.charAt(0) !== '#') return;
+
+    var target;
+    try { target = document.getElementById(decodeURIComponent(href.slice(1))); } catch(error) { return; }
+    if(!isVisible(target)) return;
+
+    event.preventDefault();
+    if(mobilePanel && mobilePanel.contains(link)){
+      mobilePanel.classList.remove('is-open');
+      if(menuLabel) menuLabel.textContent = 'MENU';
+    }
+    if(window.location.hash !== href) window.history.pushState(null, '', href);
+
+    window.requestAnimationFrame(function(){
+      var headerHeight = isVisible(header) ? header.getBoundingClientRect().height : 0;
+      var topInset = Math.max(headerHeight, parseFloat(window.getComputedStyle(document.documentElement).scrollPaddingTop) || 0);
+      var bottomInset = 0;
+      if(isVisible(mobileBar) && window.getComputedStyle(mobileBar).position === 'fixed'){
+        bottomInset = mobileBar.getBoundingClientRect().height;
+      }
+
+      var availableHeight = Math.max(1, window.innerHeight - topInset - bottomInset);
+      var targetRect = target.getBoundingClientRect();
+      var focus = target;
+
+      if(targetRect.height > availableHeight){
+        focus = target.querySelector('.hg-sec-head .hg-h2, .hg-phone-section-head .hg-phone-heading, .hg-phone-heading, .hkp-head .hkp-h2, h1, h2') || target;
+      }
+
+      var focusRect = focus.getBoundingClientRect();
+      var destination = window.scrollY + focusRect.top - topInset - (availableHeight - focusRect.height) / 2;
+      var maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      destination = Math.min(maxScroll, Math.max(0, destination));
+      window.scrollTo({ top: destination, behavior: reduceMotion ? 'auto' : 'smooth' });
+    });
+  }
+
+  links.forEach(function(link){ link.addEventListener('click', function(event){ centerSection(link, event); }); });
+})();
+</script>
+<style id="appointment-booking-styles">
+.hg-appointment-dialog{width:min(480px,calc(100% - 32px));max-width:480px;padding:0;border:1px solid rgba(188,143,63,.5);background:#f7f2e8;color:#2a1c13;box-shadow:0 24px 80px rgba(0,0,0,.3)}
+.hg-appointment-dialog::backdrop{background:rgba(18,14,11,.62);backdrop-filter:blur(3px)}
+.hg-appointment-form{position:relative;display:flex;flex-direction:column;gap:16px;padding:34px}
+.hg-appointment-form .hg-eyebrow{color:#9a6b23;font-size:10px;letter-spacing:.18em}
+.hg-appointment-form h2{margin:0;font:500 clamp(28px,5vw,38px)/1.08 var(--serif);color:#2a1c13}
+.hg-appointment-form p{margin:0;color:#6e6255;font-size:14px;line-height:1.6}
+.hg-appointment-form label{margin-top:3px;color:#5e4c37;font-size:12px;font-weight:600;letter-spacing:.04em}
+.hg-appointment-form input{width:100%;min-height:50px;padding:10px 12px;border:1px solid rgba(143,103,42,.4);border-radius:2px;background:#fffdf8;color:#2a1c13;font:500 16px var(--sans);color-scheme:light}
+.hg-appointment-form input:focus-visible,.hg-appointment-form button:focus-visible{outline:2px solid #b78737;outline-offset:3px}
+.hg-appointment-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:5px}
+.hg-appointment-actions button{min-height:48px;padding:12px 17px;border:1px solid #b78737;border-radius:2px;font:600 12px var(--sans);cursor:pointer}
+.hg-appointment-submit{flex:1;background:#e8cb8c;color:#2a1c13}
+.hg-appointment-cancel{background:transparent;color:#4b3a29}
+.hg-appointment-close{position:absolute;top:10px;right:12px;width:34px;height:34px;border:0;background:transparent;color:#65533c;font-size:28px;line-height:1;cursor:pointer}
+@media(max-width:720px){.hg-appointment-form{gap:13px;padding:30px 22px 22px}.hg-appointment-actions{flex-direction:column}.hg-appointment-actions button{width:100%}}
+</style>
+<script id="appointment-booking-flow">
+(function(){
+  "use strict";
+  var dialog=document.getElementById("appointmentDialog");
+  var form=document.getElementById("appointmentForm");
+  var dateInput=document.getElementById("appointmentDate");
+  var closeButton=document.getElementById("closeAppointmentDialog");
+  var cancelButton=document.getElementById("cancelAppointmentDialog");
+  var activeWhatsAppLink=null;
+  if(!dialog||!form||!dateInput)return;
+
+  function localDateValue(date){
+    return date.getFullYear()+"-"+String(date.getMonth()+1).padStart(2,"0")+"-"+String(date.getDate()).padStart(2,"0");
+  }
+  function closeDialog(){dialog.close();if(activeWhatsAppLink)activeWhatsAppLink.focus();}
+  function sendAppointmentRequest(value){
+    if(!value||!activeWhatsAppLink)return;
+    var match=activeWhatsAppLink.href.match(/wa\.me\/(\d+)/i);
+    if(!match)return;
+    var parts=value.split("-").map(Number);
+    var chosenDate=new Date(parts[0],parts[1]-1,parts[2]);
+    var readableDate=chosenDate.toLocaleDateString(undefined,{weekday:"long",year:"numeric",month:"long",day:"numeric"});
+    var message="Hello Hehank Gems & Jewellery, I would like to request a home visit on "+readableDate+". Please let me know if this date is available.";
+    window.location.href="https://wa.me/"+match[1]+"?text="+encodeURIComponent(message);
+  }
+
+  document.querySelectorAll("#waMainBtn,#waMobileBtn").forEach(function(link){
+    link.setAttribute("aria-haspopup","dialog");
+    link.addEventListener("click",function(event){
+      if(link.getAttribute("aria-disabled")==="true")return;
+      event.preventDefault();
+      activeWhatsAppLink=link;
+      dateInput.min=localDateValue(new Date());
+      dateInput.value="";
+      if(typeof dialog.showModal==="function")dialog.showModal();
+      else dialog.setAttribute("open","");
+      dateInput.focus();
+    });
+  });
+  dateInput.addEventListener("change",function(){if(dateInput.value)sendAppointmentRequest(dateInput.value);});
+  form.addEventListener("submit",function(event){event.preventDefault();if(dateInput.reportValidity())sendAppointmentRequest(dateInput.value);});
+  [closeButton,cancelButton].forEach(function(button){if(button)button.addEventListener("click",closeDialog);});
+  dialog.addEventListener("click",function(event){if(event.target===dialog)closeDialog();});
+})();
+</script>
 </body>
 </html>
 
